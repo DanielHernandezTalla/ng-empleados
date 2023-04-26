@@ -1,0 +1,40 @@
+<p>proyectos-component works!</p>
+
+<div class="container-sm p-4">
+  <form class="row">
+    Nombre:
+    <input
+      class="form-control"
+      type="text"
+      name="nombre"
+      [(ngModel)]="nombre"
+    />
+    Apellido:
+    <input
+      class="form-control"
+      type="text"
+      name="apellido"
+      [(ngModel)]="apellido"
+    />
+    Puesto:
+    <input
+      class="form-control"
+      type="text"
+      name="puesto"
+      [(ngModel)]="puesto"
+    />
+    Salario:
+    <input
+      class="form-control"
+      type="number"
+      name="sueldo"
+      [(ngModel)]="salario"
+    />
+
+    <input class="btn btn-primary mt-4" type="submit" (click)="saveData()" />
+  </form>
+</div>
+
+<div style="text-align: center">
+  <button class="btn btn-primary" (click)="volverHome()">Volver al HOME</button>
+</div>

@@ -1,0 +1,58 @@
+<p>actualiza-component works!</p>
+
+<div class="container-sm p-4">
+  <form class="row">
+    Nombre:
+    <input
+      class="form-control"
+      type="text"
+      name="nombre"
+      [(ngModel)]="nombre"
+    />
+    Apellido:
+    <input
+      class="form-control"
+      type="text"
+      name="apellido"
+      [(ngModel)]="apellido"
+    />
+    Puesto:
+    <input
+      class="form-control"
+      type="text"
+      name="puesto"
+      [(ngModel)]="puesto"
+    />
+    Salario:
+    <input
+      class="form-control"
+      type="number"
+      name="sueldo"
+      [(ngModel)]="salario"
+    />
+
+    <!-- <div class="d-flex justify-content-between p-0"> -->
+      <!-- <input class="col-5 btn btn-danger mt-4" type="submit" value="Eliminar" (click)="deleteData()" /> -->
+
+      <input
+        *ngIf="accion==2"
+        class="btn btn-danger mt-4"
+        type="submit"
+        value="Eliminar"
+        (click)="deleteData()"
+      />
+
+      <input
+        *ngIf="accion==1"
+        class="btn btn-primary mt-4"
+        type="submit"
+        value="Modificar"
+        (click)="updateData()"
+      />
+    <!-- </div> -->
+  </form>
+</div>
+
+<div style="text-align: center">
+  <button class="btn btn-primary" (click)="volverHome()">Volver al HOME</button>
+</div>

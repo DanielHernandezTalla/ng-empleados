@@ -1,0 +1,35 @@
+<!-- <tbody>
+    <tr>
+      <th scope="row">{{ indice + 1 }}</th>
+      <th>{{ empleado.nombre }}</th>
+      <td>{{ empleado.apellido }}</td>
+      <td>{{ empleado.puesto }}</td>
+      <td>{{ empleado.salario }}</td>
+    </tr>
+  </tbody> -->
+<div class="col-1 fw-bold">{{ indice + 1 }}</div>
+<div class="col-2">{{ empleado.nombre }}</div>
+<div class="col-2">{{ empleado.apellido }}</div>
+<div class="col-2">{{ empleado.puesto }}</div>
+<div class="col-1">{{ empleado.salario }}</div>
+<a
+  [routerLink]="['/actualizar', indice]"
+  [queryParams]="{ accion: '1' }"
+  class="col-2"
+>
+  <div class="col-2">Actualizar</div>
+</a>
+<a
+  [routerLink]="['/actualizar', indice]"
+  [queryParams]="{ accion: '2' }"
+  class="col-1"
+>
+  <div class="col-2">Eliminar</div>
+</a>
+
+<!-- <div class="col-12">
+    <app-caracteristicas (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-caracteristicas>
+    <ul style="list-style: none;">
+        <li *ngFor="let caracteristica of arrayCaracteristicas;">{{caracteristica}}</li>
+    </ul>
+</div> -->

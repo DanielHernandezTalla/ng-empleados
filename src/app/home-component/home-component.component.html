@@ -1,0 +1,46 @@
+
+<div class="container-sm p-4">
+    <h1 style="text-align: center">{{ title }}</h1>
+  
+    <form class="row">
+      Nombre:
+      <input
+        class="form-control"
+        type="text"
+        name="nombre"
+        [(ngModel)]="nombre"
+      />
+      Apellido:
+      <input
+        class="form-control"
+        type="text"
+        name="apellido"
+        [(ngModel)]="apellido"
+      />
+      Puesto:
+      <input
+        class="form-control"
+        type="text"
+        name="puesto"
+        [(ngModel)]="puesto"
+      />
+      Salario:
+      <input
+        class="form-control"
+        type="number"
+        name="sueldo"
+        [(ngModel)]="salario"
+      />
+  
+      <input class="btn btn-primary mt-4" type="submit" (click)="saveData()" />
+    </form>
+  
+    <app-empleado class="row mt-4"
+        *ngFor="let empleado of empleados; let i = index"
+        [empleado]="empleado"
+        [indice]="i"
+      >
+    </app-empleado>
+  
+  </div>
+  
